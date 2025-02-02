@@ -1,17 +1,17 @@
 class Solution {
 public:
     ListNode* sortList(ListNode* head) {
-        vector<int> ss;
+        vector<int> s;
         ListNode* temp =head;
         while(temp){
-            ss.push_back(temp->val);
+            s.push_back(temp->val);
             temp=temp->next;
         }
-        sort(ss.begin(),ss.end());
+        sort(s.begin(),s.end());
         int i =0;
         temp = head;
         while(temp){
-            temp->val=ss[i];
+            temp->val=s[i];
             temp=temp->next;
             i++;
         }
